@@ -10,7 +10,7 @@ import {
   CircularProgress,
 } from "@mui/material";
 import { applyToJob } from "../services/api";
-import { CANDIDATE_UUID, CANDIDATE_ID } from "../config/candidate";
+import {CANDIDATE_UUID, CANDIDATE_ID, APPLICATION_ID} from "../config/candidate";
 
 function JobCard({ job }) {
   const [repoUrl, setRepoUrl] = useState("");
@@ -27,6 +27,7 @@ function JobCard({ job }) {
       await applyToJob({
         uuid: CANDIDATE_UUID,
         candidateId: CANDIDATE_ID,
+          applicationId: APPLICATION_ID ,
         jobId: job.id,
         repoUrl,
       });

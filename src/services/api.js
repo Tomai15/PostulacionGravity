@@ -12,11 +12,11 @@ export async function getJobs() {
   return response.json();
 }
 
-export async function applyToJob({ uuid, candidateId, jobId, repoUrl }) {
+export async function applyToJob({ uuid, candidateId,applicationId ,jobId, repoUrl }) {
   const response = await fetch(`${BASE_URL}/api/candidate/apply-to-job`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ uuid, jobId, candidateId, repoUrl }),
+    body: JSON.stringify({ uuid, jobId, applicationId,candidateId, repoUrl }),
   });
 
   if (!response.ok) {

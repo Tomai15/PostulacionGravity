@@ -1,2 +1,3 @@
 export const CANDIDATE_UUID = "3694e8a7-605f-49e2-a926-512a70e8240a";
 export const CANDIDATE_ID = "74195589005";
+export const APPLICATION_ID = "77903283005"
